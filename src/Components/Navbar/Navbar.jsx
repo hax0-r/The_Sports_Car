@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import logo from '../../assets/logo.png'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import NAVBAR_DATA from './NavBAR_DATA'
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
@@ -29,7 +29,7 @@ export default function Navbar() {
                                 NAVBAR_DATA.map((val, index) => {
                                     return (
                                         <li key={index}>
-                                            <Link to={val.navPath} onClick={close_nav}>{val.navTitle}</Link>
+                                            <NavLink to={val.navPath} onClick={close_nav}>{val.navTitle}</NavLink>
                                         </li>
                                     )
                                 })

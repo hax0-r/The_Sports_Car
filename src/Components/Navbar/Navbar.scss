@@ -37,14 +37,21 @@ nav {
 
                         &:hover {
                             color: #c93030;
+                            text-decoration: underline;
                         }
+                    }
+                    .active{
+                        color: #c93030;
+                        text-decoration: underline;
                     }
                 }
             }
         }
-        .nav-bar{
+
+        .nav-bar {
             display: none;
         }
+
         .close-bar {
             display: none;
         }
@@ -58,7 +65,7 @@ nav {
                 display: none;
             }
 
-            .for-mobile{
+            .for-mobile {
                 background-color: #1f1f1f;
                 position: absolute;
                 top: 0;
@@ -69,13 +76,15 @@ nav {
                 justify-content: center;
                 align-items: center;
                 position: fixed;
+
                 ul {
                     display: unset;
-    
+
                     li {
                         padding: 1rem 0;
                     }
                 }
+
                 .close-bar {
                     display: block;
                     position: absolute;

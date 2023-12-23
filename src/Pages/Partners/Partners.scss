@@ -45,8 +45,19 @@
         align-items: center;
         padding: 15vmin 0;
         gap: 7vmin;
-        img{
-            height: 28vmin;
+        .first,.second,.third{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            h1{
+                font-size: 40px;
+                color: #ffffff;
+                font-weight: 500;
+            }
+            img{
+                height: 28vmin;
+            }
         }
     }
 }

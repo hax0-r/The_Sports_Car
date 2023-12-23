@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import NAVBAR_DATA from '../Navbar/NavBAR_DATA'
 import logo from '../../assets/logo.png'
 
@@ -15,10 +15,10 @@ export default function Footer() {
                         <h1>Contact</h1>
                         <h2>Keep in touch</h2>
                         <div className="links">
-                        <Link>FACEBOOK</Link>
-                        <Link>TWITTER</Link>
-                        <Link>INSTAGRAM</Link>
-                        <Link>YOUTUBE</Link>
+                        <NavLink>FACEBOOK</NavLink>
+                        <NavLink>TWITTER</NavLink>
+                        <NavLink>INSTAGRAM</NavLink>
+                        <NavLink>YOUTUBE</NavLink>
                         </div>
                     </div>
                     <div className="right">
