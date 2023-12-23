@@ -1,0 +1,52 @@
+@mixin media($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+.partners {
+    background-color: #1f1f1f;
+    .page1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.539), rgba(0, 0, 0, 0.689)), url(../../assets/aboutBg.jpg) center;
+        background-size: cover;
+        height: 100vh;
+
+        .head {
+            display: flex;
+            align-items: center;
+            height: 63vh;
+
+            h1 {
+                margin-left: 30vmin;
+                font-size: 18vmin;
+                font-weight: 700;
+                color: #ffffff;
+                text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.427);
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    @include media(768px) {
+        .page1 {
+            .head {
+                justify-content: center;
+
+                h1 {
+                    margin-left: unset;
+                }
+            }
+        }
+    }
+
+    .page2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15vmin 0;
+        gap: 7vmin;
+        img{
+            height: 28vmin;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@mixin media($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+.home {
+    .page1 {
+        background: url(../../assets/HomeBg.jpg) center;
+        background-size: cover;
+        height: 100vh;
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+
+            h1 {
+                font-size: 17.5vmin;
+                font-style: italic;
+                font-weight: 300;
+                letter-spacing: 5px;
+                line-height: 100px;
+                text-transform: uppercase;
+                color: #ffffffeb;
+
+                span {
+                    padding-left: 13rem;
+                }
+            }
+        }
+    }
+
+    @include media(768px) {
+        .page1 {
+            .content {
+                h1 {
+                    line-height: 6rem;
+                    span {
+                        padding-left: unset;
+                    }
+                }
+            }
+        }
+    }
+
+    .page2 {
+        background: linear-gradient(rgba(0, 0, 0, 0.737), rgba(0, 0, 0, 0.792)), url(../../assets/page2BG.jpg)center;
+        background-size: cover;
+        background-attachment: fixed;
+
+        .main {
+            padding: 7rem 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+
+            .content {
+                max-width: 60rem;
+                display: flex;
+                justify-content: left;
+                align-items: last baseline;
+                flex-direction: column;
+                margin-top: -3.5rem;
+
+                h1 {
+                    font-size: 12vmin;
+                    font-weight: 600;
+                    color: #47bfec;
+                }
+
+                h2 {
+                    font-size: 7vmin;
+                    color: #ffffff;
+                    font-weight: 400;
+                }
+
+                p {
+                    color: #ffffff;
+                    margin: 3vmin 0;
+                }
+
+                button {
+                    margin-top: 1rem;
+                    padding: .6rem 1.5rem;
+                    color: #47bfec;
+                    border: 2px solid #0de8e4;
+                    background-color: rgba(0, 0, 0, 0.731);
+                    transition: 200ms all;
+                    cursor: pointer;
+                    font-weight: 600;
+
+                    &:hover {
+                        color: #ffffff;
+                        background-color: #0de8e4da;
+                    }
+                }
+            }
+        }
+    }
+}
