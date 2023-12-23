@@ -15,8 +15,8 @@ export default function Router() {
       <Route path={NAVBAR_DATA[0].navPath} element={<Home />} />
       <Route path={NAVBAR_DATA[1].navPath} element={<About />} />
       <Route path={NAVBAR_DATA[2].navPath} element={<Partners />} />
-      <Route path={NAVBAR_DATA[3].navPath} element={<Contact/>} />
-      <Route path={NAVBAR_DATA[4].navPath} element={<Media />} />
+      <Route path={NAVBAR_DATA[3].navPath} element={<Media />} />
+      <Route path={NAVBAR_DATA[4].navPath} element={<Contact/>} />
     </Routes>
 
     </>

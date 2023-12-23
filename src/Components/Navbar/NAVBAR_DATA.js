@@ -12,12 +12,12 @@ const NAVBAR_DATA = [
         navPath : "/partners"
     },
     {
+        navTitle : "Media",
+        navPath : "/media"
+    },
+    {
         navTitle : "Contact",
         navPath : "/contact"
     },
-    {
-        navTitle : "Media",
-        navPath : "/media"
-    }
 ]
  export default NAVBAR_DATA;
