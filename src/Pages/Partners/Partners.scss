@@ -51,12 +51,24 @@
             align-items: center;
             width: 100%;
             h1{
-                font-size: 40px;
+                font-size: 7vmin;
                 color: #ffffff;
                 font-weight: 500;
             }
             img{
                 height: 28vmin;
+            }
+        }
+    }
+    @include media(768px){
+        .page2{
+            .first,.second,.third{
+                flex-direction: column;
+                padding-bottom: 5vmin;
+                h1{
+                    padding-bottom: 2vmin;
+                    text-align: center;
+                }
             }
         }
     }

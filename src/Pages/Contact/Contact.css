@@ -1,0 +1,93 @@
+.contact {
+  background-color: #1f1f1f;
+}
+.contact .page1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.539), rgba(0, 0, 0, 0.689)), url(../../assets/aboutBg.jpg) center;
+  background-size: cover;
+  height: 100vh;
+}
+.contact .page1 .head {
+  display: flex;
+  align-items: center;
+  height: 63vh;
+}
+.contact .page1 .head h1 {
+  margin-left: 30vmin;
+  font-size: 18vmin;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.427);
+}
+@media screen and (max-width: 768px) {
+  .contact .page1 .head {
+    justify-content: center;
+  }
+  .contact .page1 .head h1 {
+    margin-left: unset;
+  }
+}
+.contact .page2 .main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15vmin 2rem;
+  gap: 10vmin;
+}
+.contact .page2 .main .left h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8156862745);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.contact .page2 .main .left .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: #44b6e6;
+  border-radius: 50%;
+}
+.contact .page2 .main .left .icons svg {
+  cursor: pointer;
+  transition: 200ms all;
+}
+.contact .page2 .main .left .icons svg:hover {
+  color: #ffffff;
+  scale: 1.25;
+}
+.contact .page2 .main .mid h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8156862745);
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+.contact .page2 .main .mid p {
+  color: #44b6e6;
+  text-align: center;
+  cursor: pointer;
+}
+.contact .page2 .main .mid p span {
+  color: #ffffff;
+}
+.contact .page2 .main .right h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8156862745);
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+.contact .page2 .main .right p {
+  color: #44b6e6;
+  text-align: center;
+  cursor: pointer;
+}
+.contact .page2 .main .right p span {
+  color: #ffffff;
+}/*# sourceMappingURL=Contact.css.map */

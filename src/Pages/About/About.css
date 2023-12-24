@@ -1,0 +1,45 @@
+.about .page1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.539), rgba(0, 0, 0, 0.689)), url(../../assets/aboutBg.jpg) center;
+  background-size: cover;
+  height: 100vh;
+}
+.about .page1 .head {
+  display: flex;
+  align-items: center;
+  height: 63vh;
+}
+.about .page1 .head h1 {
+  margin-left: 30vmin;
+  font-size: 18vmin;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.427);
+}
+.about .page2 {
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .page2 .main {
+  max-width: 80rem;
+  width: 100%;
+  padding: 15vmin 15vmin;
+}
+.about .page2 .main h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 1rem 0;
+}
+.about .page2 .main p {
+  color: rgba(255, 255, 255, 0.5058823529);
+}
+@media screen and (max-width: 768px) {
+  .about .page1 .head {
+    justify-content: center;
+  }
+  .about .page1 .head h1 {
+    margin-left: unset;
+  }
+}/*# sourceMappingURL=About.css.map */

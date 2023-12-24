@@ -16,6 +16,10 @@
         justify-content: center;
         align-items: center;
         padding: 2rem 0;
+
+        img {
+            height: 10vmin;
+        }
     }
 
     .content {
@@ -58,9 +62,7 @@
                     }
                 }
 
-                .active {
-                    color: #c94a4a;
-                }
+
             }
         }
     }
@@ -116,6 +118,10 @@
                 &:hover {
                     color: #c94a4a;
                 }
+            }
+
+            .active {
+                color: #c94a4a;
             }
         }
     }
