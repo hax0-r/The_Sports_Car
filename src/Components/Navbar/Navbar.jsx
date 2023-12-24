@@ -21,7 +21,7 @@ export default function Navbar() {
         <>
             <nav>
                 <div className="main">
-                    <Link><img src={logo} alt="" /></Link>
+                    <Link to="/" ><img src={logo} alt="" /></Link>
                     <div className="links" ref={nav_hide}>
                         <ul>
                         <div className="close-bar" onClick={close_nav} ><IoClose /></div>

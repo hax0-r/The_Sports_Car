@@ -1,10 +1,12 @@
-import React, { useRef } from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
+import { IoClose } from "react-icons/io5";
+import { GrFormNext } from "react-icons/gr";
+import { IoIosArrowBack } from "react-icons/io";
 import page2Img from '../../assets/page2.jpg'
 import page3_1 from '../../assets/partner1.png'
 import page3_2 from '../../assets/partner2.png'
 import page3_3 from '../../assets/partner3.png'
-import { IoClose } from "react-icons/io5";
 // ----Gallery Img-----
 import media_2021_1 from '../../assets/media2021-1.jpg'
 import media_2021_2 from '../../assets/media2021-2.jpg'
@@ -29,451 +31,74 @@ import media_others_2 from '../../assets/media-others-2.jpg'
 
 // ----Gallery Img-----
 
-export default function Home() {
-  const add = useRef();
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 
-  const zoom1 = () => {
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom1")
+const images = [
+  media_2021_1,
+  media_2021_2,
+  media_2021_3,
+  media_2021_4,
+  media_2021_5,
+  media_2021_6,
+  media_2021_7,
+  media_2021_8,
+  media_2021_9,
+  media_2021_10,
+  media_2023_1,
+  media_2023_2,
+  media_2023_3,
+  media_2023_4,
+  media_2023_5,
+  media_2023_6,
+  media_2023_7,
+  media_2023_8,
+  media_others_1,
+  media_others_2
+]
+
+export default function Home() {
+
+  const [data, setData] = useState({ image: '', i: 0 })
+
+  const viewImage = (image, i) => {
+    setData({ image, i })
   }
-  const zoom2 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom2")
+
+  const imageAction = (action) => {
+    let i = data.i
+    if (action === 'next_img') {
+      setData({ image: images[i + 1], i: i + 1 })
+    }
+    if (action === 'pre_img') {
+      setData({ image: images[i - 1], i: i - 1 })
+    }
+    if (!action) {
+      setData({ image: '', i: 0 })
+    }
   }
-  const zoom3 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom3")
-  }
-  const zoom4 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom4")
-  }
-  const zoom5 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom5")
-  }
-  const zoom6 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom6")
-  }
-  const zoom7 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom7")
-  }
-  const zoom8 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom8")
-  }
-  const zoom9 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom9")
-  }
-  const zoom10 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom10")
-  }
-  const zoom11 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom11")
-  }
-  const zoom12 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoo123")
-  }
-  const zoom13 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom13")
-  }
-  const zoom14 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom14")
-  }
-  const zoom15 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom15")
-  }
-  const zoom16 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom16")
-  }
-  const zoom17 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom17")
-  }
-  const zoom18 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom18")
-  }
-  const zoom19 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom20")
-    add.current.classList.toggle("mainZoom19")
-  }
-  const zoom20 = () => {
-        add.current.classList.remove("mainZoom1")
-    add.current.classList.remove("mainZoom2")
-    add.current.classList.remove("mainZoom3")
-    add.current.classList.remove("mainZoom4")
-    add.current.classList.remove("mainZoom5")
-    add.current.classList.remove("mainZoom6")
-    add.current.classList.remove("mainZoom7")
-    add.current.classList.remove("mainZoom8")
-    add.current.classList.remove("mainZoom9")
-    add.current.classList.remove("mainZoom10")
-    add.current.classList.remove("mainZoom11")
-    add.current.classList.remove("mainZoom12")
-    add.current.classList.remove("mainZoom13")
-    add.current.classList.remove("mainZoom14")
-    add.current.classList.remove("mainZoom15")
-    add.current.classList.remove("mainZoom16")
-    add.current.classList.remove("mainZoom17")
-    add.current.classList.remove("mainZoom18")
-    add.current.classList.remove("mainZoom19")
-    add.current.classList.toggle("mainZoom20")
-  }
+
   return (
     <>
+      {
+        data.image &&
+        <div style={
+          {
+            width: "100%",
+            height: "100vh",
+            background: "black",
+            position: "fixed",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            overflow: 'hidden'
+          }
+        }>
+          <IoClose onClick={() => imageAction()} style={{ position: "absolute",color:"white",fontSize:"2.5rem", top: "1.5rem", right: "2.5rem",cursor:"pointer" }} />
+          <IoIosArrowBack onClick={() => imageAction('pre_img')} style={{ color:"white",fontSize:"2.8rem",cursor:"pointer" }} />
+          <img src={data.image} style={{ width: "auto", maxWidth: "90%", maxHeight: "90%" }} alt="" />
+          <GrFormNext  onClick={() => imageAction('next_img')} style={{ color:"white",fontSize:"3rem",cursor:"pointer" }} />
+        </div>
+      }
       <div className="home">
         <div className="page1">
           <Navbar />
@@ -515,27 +140,22 @@ export default function Home() {
             <h1>PHOTOS</h1>
           </div>
           <div className="content">
-            <div className="main" ref={add}>
-              <img onClick={zoom1} src={media_2021_1} alt="gallery" />
-              <img onClick={zoom2} src={media_2021_2} alt="gallery" />
-              <img onClick={zoom3} src={media_2021_3} alt="gallery" />
-              <img onClick={zoom4} src={media_2021_4} alt="gallery" />
-              <img onClick={zoom5} src={media_2021_5} alt="gallery" />
-              <img onClick={zoom6} src={media_2021_6} alt="gallery" />
-              <img onClick={zoom7} src={media_2021_7} alt="gallery" />
-              <img onClick={zoom8} src={media_2021_8} alt="gallery" />
-              <img onClick={zoom9} src={media_2021_9} alt="gallery" />
-              <img onClick={zoom10} src={media_2021_10} alt="gallery" />
-              <img onClick={zoom11} src={media_2023_1} alt="gallery" />
-              <img onClick={zoom12} src={media_2023_2} alt="gallery" />
-              <img onClick={zoom13} src={media_2023_3} alt="gallery" />
-              <img onClick={zoom14} src={media_2023_4} alt="gallery" />
-              <img onClick={zoom15} src={media_2023_5} alt="gallery" />
-              <img onClick={zoom16} src={media_2023_6} alt="gallery" />
-              <img onClick={zoom17} src={media_2023_7} alt="gallery" />
-              <img onClick={zoom18} src={media_2023_8} alt="gallery" />
-              <img onClick={zoom19} src={media_others_1} alt="gallery" />
-              <img onClick={zoom20} src={media_others_2} alt="gallery" />
+            <div className="main">
+              <ResponsiveMasonry
+                columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+              >
+                <Masonry gutter='12px'>
+                  {images.map((image, i) => (
+                    <img
+                      key={i}
+                      src={image}
+                      style={{ width: "100%", display: "block" }}
+                      alt=""
+                      onClick={() => viewImage(image, i)}
+                    />
+                  ))}
+                </Masonry>
+              </ResponsiveMasonry>
             </div>
           </div>
         </div>
