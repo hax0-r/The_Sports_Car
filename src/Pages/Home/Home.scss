@@ -3,8 +3,10 @@
         @content;
     }
 }
+
 .home {
     background: #1f1f1f;
+
     .page1 {
         background: url(../../assets/HomeBg.jpg) center;
         background-size: cover;
@@ -37,6 +39,7 @@
             .content {
                 h1 {
                     line-height: 6rem;
+
                     span {
                         padding-left: unset;
                     }
@@ -105,75 +108,450 @@
         }
     }
 
-    .page3{
-        .head{
-            padding:5vmin 20vmin;
-            h1{
+    .page3 {
+        .head {
+            padding: 5vmin 20vmin;
+
+            h1 {
                 font-size: 12vmin;
                 font-weight: 600;
                 color: #47bfec;
             }
-            p{
+
+            p {
                 color: #ffffff;
-                max-width:38rem;
+                max-width: 38rem;
                 width: 100%;
             }
         }
-        .content{
+
+        .content {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             padding: 5rem 0;
-            img{
+
+            img {
                 height: 20vmin;
             }
         }
     }
-    .page4{
-        .head{
+
+    .page4 {
+        .head {
             padding-left: 20vmin;
-            h3{
+
+            h3 {
                 font-size: 7vmin;
-                font-weight:500;
+                font-weight: 500;
                 line-height: 2vmin;
                 color: #c94a4a;
             }
-            h1{
+
+            h1 {
                 font-size: 12vmin;
                 font-weight: 600;
                 color: #47bfec;
-
+                font-style: italic;
             }
         }
-        .content{
+
+        .content {
             padding: 1rem;
-            .main{
+
+            .main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
-                img{
+
+                img {
                     max-width: 213px;
                     width: 100%;
                     margin: .3rem;
                     cursor: pointer;
                     transition: 200ms all;
-                    &:hover{
-                        filter: brightness(1.25)
+
+                    &:hover {
+                        filter: brightness(1.25);
+                    }
+                }
+            }
+
+            .mainZoom1 {
+                position: relative;
+                
+                img {
+                    filter: brightness(0.2);
+                    
+                    &:nth-child(1) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .mainZoom2 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(2) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .mainZoom3 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(3) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom4 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(4) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom5 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(5) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom6 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(6) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom7 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(7) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom8 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(8) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom9 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(9) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom10 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(10) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom11 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(11) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom12 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(12) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom13 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(13) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom14 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(14) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom15 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(15) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom16 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(16) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom17 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(17) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom18 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(18) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom19 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(19) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .mainZoom20 {
+                position: relative;
+
+                img {
+                    filter: brightness(0.2);
+
+                    &:nth-child(20) {
+                        filter: unset;
+                        z-index: 99;
+                        max-width: unset;
+                        width: 120vmin;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
                 }
             }
         }
     }
-   @include media(768px){
-    .page4{
-        .head{
-            padding-left: unset;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+
+    @include media(768px) {
+        .page4 {
+            .head {
+                padding-left: unset;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
         }
     }
-   }
 }
